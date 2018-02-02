@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>constructor_use_in_javascript</title>
+</head>
+<body>
+	<h1>constructor_use_in_javascript</h1>
+	<script type="text/javascript">
+		function car(tempmake,tempmodel,tempyear,tempengine){
+			this.make = tempmake;
+			this.model = tempmodel;
+			this.year  = tempyear;
+			this.engine = tempengine;
+		}
+		var mycar = new car('maruti suzuki' , ' alto ' , 2010 , ' DDis ');
+		document.write( mycar.make  +  mycar.model  +  mycar.year  +  mycar.engine);
+	</script>
+</body>
+</html>

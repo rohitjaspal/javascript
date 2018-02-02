@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test1_javascript</title>
+	</head>
+<body>
+<h1 id="test">test1_javascript</h1>
+<script type="text/javascript">
+
+	var batwing = {
+			status:"Ready",
+			rescueBatman:function(){
+				document.write("i love my india");
+			}
+	}
+		if (batwing.status === "Ready"){
+			batwing.rescueBatman();
+		}
+		var utilities = {
+			printallmembers: function(targetobject){
+				for (i in targetobject){
+					document.write("<br/>" + targetobject[i]);
+				}
+
+			}
+		}
+		utilities.printallmembers(batwing);
+	</script>
+	<script type="text/javascript">
+	
+	function _x(x)
+		{
+			return document.getelementByid(x);
+		}
+
+		function new(){ var c = _x('test').value; alert(c); }
+		new();		
+</script>
+</body>
+</html>

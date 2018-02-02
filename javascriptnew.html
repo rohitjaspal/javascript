@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascriptnew.html</title>
+</head>
+<body>
+	<h1>javascriptnew.html</h1>
+	<script type="text/javascript">
+		var planet={
+			id:34,
+			name:"IMTEMPESTA NOX",
+			FACTION:
+				{
+					FACTIONID:2,
+					NAME:"NEX", 
+ 			notification:function(){
+ 			document.write("NEX alliance....unite!");
+ 				}
+			},
+		cities:
+		[
+			{locationid:15, name:"gladius"},
+			{locationid:16, name:"love you mom"},
+			{locationid:17, name:"home"},
+		]
+	};
+		//document.write(planet.FACTION.notification());
+		document.write(planet.cities[1].name);
+	</script>
+</body>
+</html>

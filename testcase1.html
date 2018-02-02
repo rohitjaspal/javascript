@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>coder</title>
+	<style type="text/css">
+		form {
+			border-style: solid; 
+			background-color: grey;
+			height:100%;
+			width:100%;  
+			}
+	</style>
+</head>
+<body>
+	<form action="#" method="post">
+	please enter something:
+<br/>
+	checkdatatype:<input type="text" name="check_datatype" id="demo">
+	<button type="button" onclick="datatype()" width = "100%" height = "100%">datatype</button>
+</form>
+		<script type="text/javascript">
+			function datatype()
+			{
+				var x = document.getElementById('demo').value;
+				if (x.length == 0) 
+				{
+					alert("please enter a real value");
+					
+				} 
+				else 
+				{
+					click();
+				}
+			}
+					 function click()
+				
+					 {
+					 var x = document.getElementById('demo').value;
+
+						if (!isNaN(x))
+						{
+				 			alert("your typed data" + x + " is  a number");
+
+				 		}
+				  		else 
+				 		{
+				 			alert("your typed data" + x + " is a string ");
+				 		}
+					}
+		</script>
+</body>
+</html>

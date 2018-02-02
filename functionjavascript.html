@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>functionplay</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<input type="text"  id="myvalue1" width="80px" height="80px">
+	<input type="text"  id="myvalue2" width="80px" height="80px">
+	<input type="button" value="click me to add" onclick="add()">
+		<script type="text/javascript">
+			var c = 0;
+			document.getElementById('myvalue1').value;
+			document.getElementById('myvalue2').value;
+			function add()
+			{
+				c = myvalue2 + myvalue1;				
+			}
+			document.getElementById('demo').innerHTML = c;
+			alert("c");
+		</script>
+</body>
+</html>

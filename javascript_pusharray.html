@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function moveto(){
+			var ul = document.getElementById('mylist');
+			var li = document.createElement("li");
+			li.appendChild(document.createTextNode("twelve"));
+			ul.appendChild(mylist);
+			alert(li.id);
+		}
+	</script>
+	<button onclick="moveto()">movt to another list</button>
+<select id="mylist" size="12">
+  <option value="Jam_On_It">Jam On It</option>
+  <option value="Stoker">Stoker</option>
+  <option value="Skull_Fire">Skull Fire</option>
+  <option value="Scurvy_Pirate">Scurvy Pirate</option>
+   <option value="Jam_On_It">Jam On It</option>
+  <option value="Stoker">Stoker</option>
+  <option value="Skull_Fire">Skull Fire</option>
+  <option value="Scurvy_Pirate">Scurvy Pirate</option>
+   <option value="Jam_On_It">Jam On It</option>
+  <option value="Stoker">Stoker</option>
+  <option value="Skull_Fire">Skull Fire</option>
+  <option value="Scurvy_Pirate">Scurvy Pirate</option>
+</select>
+</body>
+</html>

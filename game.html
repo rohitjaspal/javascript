@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <style>
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container {
+            margin: 10px;
+            border: 5px solid #999;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="clickbtn" onclick="playTurn()">Roll Dice</button>
+    <div>
+        <span id="current-player">Unknown</span> Got
+        <span id="current-score">0</span>
+    </div>
+    <div class="row">
+        <div class="container plr1-container">
+            <h2>Player 1</h2>
+            <label>Total Score: </label>
+            <input type="number" value="0" id="player1" disabled>
+        </div>
+        <div class="container plr2-container">
+            <h2>Player 2</h2>
+            <label>Total Score</label>
+            <input type="number" value="0" id="player2" disabled>
+        </div>
+    </div>
+</body>
+<script>
+
+    var player1 = document.querySelector("#player1");
+    var player2 = document.querySelector("#player2");
+    var currPlayerLabel = document.querySelector("#current-player");
+    var currScoreLabel = document.querySelector("#current-score");
+    var plr1Container = document.querySelector(".plr1-container");
+    var plr2Container = document.querySelector(".plr2-container");
+    var currentPlayer = player1;
+    function TogglePlayer() {
+        if (currentPlayer === player1) {
+            currentPlayer = player2;
+        } else {
+            currentPlayer = player1;
+        }
+    }
+    function RollDice() {
+        return Math.floor(Math.random() * 6) + 1;
+    }
+    function playTurn() {
+        var currentScore = RollDice();
+        flash();
+        currPlayerLabel.textContent = getCurrentPlayerName();
+        currScoreLabel.textContent = currentScore;
+        currentPlayer.value = parseInt(currentPlayer.value) + currentScore;
+        var winner;
+        if (currentPlayer.value >= 50) {
+            alert("winner of this game is:" + getCurrentPlayerName());
+            } 
+        TogglePlayer();
+    }
+    function getCurrentPlayerName(){
+        return  currentPlayer === player1 ? "player1" : "player2";
+    }
+    function flash() {
+        plr1Container.style.boxShadow = "";
+        plr2Container.style.boxShadow = "";
+        if (currentPlayer === player1) {
+            plr1Container.style.boxShadow = "0px 5px 20px #ff6600";
+        }
+        else {
+            plr2Container.style.boxShadow = "0px 5px 20px #ff6600";
+        }
+    }
+</script>
+
+</html>

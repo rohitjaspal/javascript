@@ -1,0 +1,115 @@
+<html>
+
+<head>
+</head>
+<title>
+    javascript game
+</title>
+<article>
+
+    <body>
+
+        <button type="btn45" onclick="go()" style="background-color:darkorange">roll dice</button>
+        <br>
+        <span>
+            <div id="wrapper">
+
+                <div class="part1" id="demo" style="border:solid 1px;border-color:blue;background-color:rgb(212, 230, 230);padding:10px;position:absolute;height:272px;width:257px;float:left;margin:-1px -30px 236px 280px">
+
+                    <button type="btn" id="player1" disabled="true" style="padding-left:15px">player1</button>
+                    <span>
+                        <span>
+                            <span>
+
+                                <input type="text" height="10px" width="5px" id="textbox1" style="margin-top:90px">
+                                <br>
+                                <br>Totalscore
+                                <input type="text" height="10px" width="5px" id="score1" style="margin-top:120px">
+                </div>
+                <img src="file:///C:/Users/Rphit/Desktop/javascript/images/dice_1.jpg" id="1" style="width:40px; height:40px;position:absolute;margin-top:20px;visibility:hidden">
+                <img src="file:///C:/Users/Rphit/Desktop/javascript/images/dice_2.jpg" id="2" style="width:40px; height:40px;position:absolute;margin-top:20px;visibility:hidden">
+                <img src="file:///C:/Users/Rphit/Desktop/javascript/images/dice_3.jpg" id="3" style="width:40px; height:40px;position:absolute;margin-top:20px;visibility:hidden">
+                <img src="file:///C:/Users/Rphit/Desktop/javascript/images/dice_4.jpg" id="4" style="width:40px; height:40px;position:absolute;margin-top:20px;visibility:hidden">
+                <img src="file:///C:/Users/Rphit/Desktop/javascript/images/dice_5.jpg" id="5" style="width:40px; height:40px;position:absolute;margin-top:20px;visibility:hidden">
+                <img src="file:///C:/Users/Rphit/Desktop/javascript/images/dice_6.jpg" id="6" style="width:40px; height:40px;position:absolute;margin-top:20px;visibility:hidden">
+                <div class="part1" id="demo2" style="border:solid 1px;border-color:blue;background-color:rgb(231, 164, 164);padding:5px;position:relative;height:281px;width:257px;margin:0px 0px 0px 559px;">
+                    <input type="Number" height="10px" width="5px" id="textbox2" style="margin-top:90px">
+                    <button type="btn" id="player2" disabled="disabled" style="padding:5px">player2</button>
+                    <br>
+                    <br>Totalscore
+                    <input type="Number" height="10px" width="5px" id="score2" style="margin-top:120px">
+                </div>
+            </div>
+            <script>
+                var player1 = document.getElementById("textbox1").focus();
+                function go()
+                {
+               
+                var player1 = Number(document.querySelector("#textbox1"));
+                var player2 = Number(document.querySelector("#textbox2"));
+                var dice = Math.floor(Math.random() * 6) + 1;
+                player1 = Number(dice);
+                var temp = player1;
+                var x = document.getElementById("score1").value = Number(temp) + Number(player1);
+                console.log(x);
+                
+                    dicethrown();
+                    function dicethrown() {
+                        if (dice == 1) {
+                            document.getElementById("1").style.visibility = "visible";
+                            document.getElementById("2").style.visibility = "hidden";
+                            document.getElementById("3").style.visibility = "hidden";
+                            document.getElementById("4").style.visibility = "hidden";
+                            document.getElementById("5").style.visibility = "hidden";
+                            document.getElementById("6").style.visibility = "hidden";
+                        }
+                        else if (dice == 2) {
+                            document.getElementById("1").style.visibility = "hidden";
+                            document.getElementById("2").style.visibility = "visible";
+                            document.getElementById("3").style.visibility = "hidden";
+                            document.getElementById("4").style.visibility = "hidden";
+                            document.getElementById("5").style.visibility = "hidden";
+                            document.getElementById("6").style.visibility = "hidden";
+
+                        }
+                        else if (dice == 3) {
+                            document.getElementById("1").style.visibility = "hidden";
+                            document.getElementById("2").style.visibility = "hidden";
+                            document.getElementById("3").style.visibility = "visible";
+                            document.getElementById("4").style.visibility = "hidden";
+                            document.getElementById("5").style.visibility = "hidden";
+                            document.getElementById("6").style.visibility = "hidden";
+
+                        }
+                        else if (dice == 4) {
+                            document.getElementById("1").style.visibility = "hidden";
+                            document.getElementById("2").style.visibility = "hidden";
+                            document.getElementById("3").style.visibility = "hidden";
+                            document.getElementById("4").style.visibility = "visible";
+                            document.getElementById("5").style.visibility = "hidden";
+                            document.getElementById("6").style.visibility = "hidden";
+                        }
+                        else if (dice == 5) {
+                            document.getElementById("1").style.visibility = "hidden";
+                            document.getElementById("2").style.visibility = "hidden";
+                            document.getElementById("3").style.visibility = "hidden";
+                            document.getElementById("4").style.visibility = "hidden";
+                            document.getElementById("5").style.visibility = "visible";
+                            document.getElementById("6").style.visibility = "hidden";
+                        } else if (dice == 6) {
+
+                            document.getElementById("1").style.visibility = "hidden";
+                            document.getElementById("2").style.visibility = "hidden";
+                            document.getElementById("3").style.visibility = "hidden";
+                            document.getElementById("4").style.visibility = "hidden";
+                            document.getElementById("5").style.visibility = "hidden";
+                            document.getElementById("6").style.visibility = "visible";
+                        }
+                       
+                    }
+                
+                };
+            </script>
+    </body>
+
+</html>

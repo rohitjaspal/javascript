@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>
+baseconvertor
+    </title>
+
+    <body>
+
+        <form name="userform" action="" autocomplete="off">
+            <fieldset>
+                input value from user in kg:
+                <input type="textbox" name="user" id="userInput" onchange="convert()">
+                <span id="demo"></span>
+                <br>
+                <br>
+                <br> kilogram :
+                <input type="textbox" name="kilogram" id="kilogram">
+                <br><br>
+                <br> gram :
+                <input type="textbox" name="gram" id="gram">
+                <br>
+                <br> milligram :
+                <input type="textbox" name="milligram" id="milligram">
+                <br>
+                <br> tone:
+                <input type="textbox" name="tone" id="tone">
+                <br>
+                <br>
+                <br> pound:
+                <input type="textbox" name="pound" id="pound">
+                <br>
+                <br> stones:
+                <input type="textbox" name="stones" id="stones">
+                <br>
+                <br>
+
+            </fieldset>
+        </form>
+        <script>
+            var userElem = document.forms["userform"]["user"];
+             function convert() {
+                document.getElementById("demo").innerHTML = userElem.value;
+                document.getElementById('kilogram').value = userElem.value * 1;
+                document.getElementById('gram').value = userElem.value * 1000; 
+                document.getElementById('milligram').value = userElem.value * 1000000; 
+                document.getElementById('pound').value = userElem.value * 2.20462;
+                document.getElementById('stones').value = userElem.value * 0.157473;
+                document.getElementById('tone').value = userElem.value * 0.001;
+            }
+            </script>
+    </body>
+</head>
+
+</html>

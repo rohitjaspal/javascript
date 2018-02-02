@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM_onload_button_javascript 2</title>
+</head>
+<body>
+	
+<h1>DOM_onload_button_javascript 2</h1>
+<script type="text/javascript">
+	window.onload = function(){
+		var clickmebutton = document.getElementById('clickme');
+		clickmebutton.onclick = runtheexample();
+		document.getElementById('clickme').onclick = runtheexample();
+
+	}
+	function runtheexample(){
+		alert('running the example');
+	} 
+	function runtheexample(){
+		var myelement = document.getElementById('second');
+		var mynodename = myelement.nodename;
+		alert(mynodename);
+
+		if (myelement != null) {
+		alert(myelement.innerHTML);
+		}
+	}
+</script>
+</body>
+</html>
